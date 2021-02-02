@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Music Directory</title>
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body> 
+        <div class="container">
+            <h1 class="text-center text-light">Music Search</h1>
+            <div class="search-form p-3 m-auto col-sm-8 box-shadow">
+                <form id="search-form">
+                    <div class="row pt-3 ">
+                        <div class="col-sm-3">
+                           <h4> Artist:</h4>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="textbox" id="artist" name="artist" placeholder="Enter the Artist Name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row pt-3 ">
+                        <div class="col-sm-3">
+                        <h4> Song:</h4>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="textbox" id="song" name="song" placeholder="Enter the Song Title" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row pt-3 ">
+                        <div class="col-sm-3">
+                        <h4> Album:</h4>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="textbox" id="album" name="album" placeholder="Enter the Album Name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row pt-3 ">
+                        <div class="col-sm-3">
+                        <h4> Genre:</h4>
+                        </div>
+                        <div class="col-sm-9">
+                            <select id="genre" name="genre" class="form-control">
+                                <option value="">Please Select a Genre</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-sm-4 offset-md-3">
+                            <input type="button" class="btn btn-block btn-secondary" name="search" id="search" value="Search" >
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="button" class="btn btn-block btn-secondary" name="reset" id="reset" value="Reset" >
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="albums mt-3 row" id="albums"></div>
+            <div class="allsongs mt-5" id="allsongs"></div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
